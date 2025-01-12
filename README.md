@@ -8,7 +8,7 @@ you need to fill your credentials here $HOME/your_project_env_vars.sh, you shoul
 
 these are the credentials that you need to add
 
-```
+```Bash
 DB_NAME=<your_db_name>
 DB_USER=<your_db_user>
 DB_HOST=<your_db_host>
@@ -27,7 +27,7 @@ it should produce a dump of your db that you can then load with pg_dump as well
 after confirming it's working you can configure crontab to run it daily
 move this shell script to your project folder in your server and configure contab 
 
-```
+```Bash
 # to open crontab configuratio on linux
 crontab -e
 # add this to the crontab file
