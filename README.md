@@ -21,3 +21,15 @@ S3_PATH=<your_s3_path>
 * by default it saves all backups in $HOME/backups
 * you can check the logs in $HOME/backup.log
 
+after configuring you should try to run once to see if everything is working
+it should produce a dump of your db that you can then load with pg_dump as well
+
+after confirming it's working you can configure crontab to run it daily
+move this shell script to your project folder in your server and configure contab 
+
+```
+# to open crontab configuratio on linux
+crontab -e
+# add this to the crontab file
+0 2 * * * $HOME/your-project/backup.sh >> $HOME/your-project-backup.log 2>&1
+```
