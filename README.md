@@ -1,4 +1,4 @@
-# Backup sh
+# PG Backup SH
 
 Simple db backup script, create a db backup and saves on s3
 
