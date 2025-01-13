@@ -44,3 +44,9 @@ crontab -e
 # add this to the crontab file
 0 2 * * * $HOME/your-project/backup.sh >> $HOME/your-project-backup.log 2>&1
 ```
+
+# Respore the backup
+
+```
+pg_restore -U <user> -d <your_db_name> <generated_file.sql>
+```
